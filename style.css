@@ -1,0 +1,128 @@
+/* CSS Reset & Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, .wrapper {
+  height: 100%;
+  font-family: 'Inter', sans-serif; /* A modern, highly-legible font */
+  background-color: #f5f8fa; /* Light, neutral background */
+}
+
+body {
+  color: #333; /* Dark text for readability */
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px; /* More rounded corners for a modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadows */
+  max-width: 800px;
+  width: 100%;
+  padding: 32px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px); /* Card lift effect */
+}
+
+.card-header::after,
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e0e0e0; /* Lighter gray */
+  height: 1px;
+  margin-top: 16px;
+}
+
+.card-body {
+  min-height: 100px;
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  text-align: center;
+  padding-top: 16px;
+}
+
+.btn {
+  background-color: #FF4078; /* Vibrant accent color */
+  border: none;
+  border-radius: 30px; /* More rounded button */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 14px 40px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover transition */
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e0285b; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight hover lift effect */
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  background-color: #e0e0e0; /* Subtle disabled color */
+}
+
+.float-right {
+  float: right;
+}
+
+#password {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fafafa; /* Light background for input */
+  transition: border-color 0.3s ease;
+}
+
+#password:focus {
+  border-color: #FF4078; /* Focused state with vibrant color */
+  outline: none;
+}
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
+
+  #password {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+}
