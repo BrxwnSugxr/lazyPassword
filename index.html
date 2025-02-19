@@ -3,13 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A simple and modern password generator" />
-    <meta name="author" content="Muhamad" />
     <title>Password Generator</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,17 +11,37 @@
       <header>
         <h1>Password Generator</h1>
       </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Secure Password</h2>
+      <div id="card">
+        <div id="card-header">
+          <h2>Generate a Password</h2>
         </div>
-        <div class="card-body">
+        <div id="card-body">
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+          <div id="password-options">
+            <label for="length">Password Length (8 to 128 characters):</label>
+            <input type="number" id="length" min="8" max="128" value="12" />
+            <br />
+            <label>
+              <input type="checkbox" id="lowercase" checked /> Lowercase letters
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" id="uppercase" checked /> Uppercase letters
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" id="numbers" checked /> Numbers
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" id="special" checked /> Special characters
+            </label>
+          </div>
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
